@@ -1,23 +1,50 @@
-// import Player from '@vimeo/player';
+//import Player from '@vimeo/player';
+
+//var throttle = require('lodash.throttle');
+
+import throttle from 'lodash';
+
+console.log(_.throttle);
 
 // const iframe = document.querySelector('iframe');
-// const player = new Vimeo.Player(iframe);
 
-    // player.on('play', function() {
-    //     console.log('played the video!');
-    // });
+// const player = new Player(iframe);
 
-    // player.getVideoTitle().then(function(title) {
-    //     console.log('title:', title);
-    // });
+// const timeVideo = localStorage.getItem('videoplayer-current-time');
 
-import Player from '@vimeo/player';
+// player
+//   .setCurrentTime(timeVideo)
+//   .then(function (seconds) {
+//     // seconds = the actual time that the player seeked to
+//   })
+//   .catch(function (error) {
+//     switch (error.name) {
+//       case 'RangeError':
+//         // the time was less than 0 or greater than the video’s duration
+//         break;
 
-const player = new Player('handstick', {
-    id: 192318684,
-    width: 640
-});
+//       default:
+//         // some other error occurred
+//         break;
+//     }
+//   });
 
-player.on('play', function() {
-    console.log('played the video!');
-})
+// var nowTime = _.throttle(() => {
+//   console.log(456);
+// }, 1000);
+
+// player.on('play', nowTime);
+
+// function nowTime() {
+//   player
+//     .getCurrentTime()
+//     .then(function (seconds) {
+//       //seconds = the current playback position
+//       console.log(seconds);
+//     })
+//     .catch(function (error) {
+//       // an error occurred
+//     });
+
+//   console.log(nowTime);
+// }
