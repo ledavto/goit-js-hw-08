@@ -29,9 +29,6 @@ player
     }
   });
 
-// var nowTime = throttle(() => {
-//   console.log(456);
-// }, 1000);
 
 function nowTime() {
   player
@@ -48,8 +45,8 @@ function nowTime() {
   // console.log(nowTime);
 }
 
-//player.on('timeupdate', throttle(nowTime, 1000));
-player.on('timeupdate', nowTime);
+player.on('timeupdate', throttle(nowTime, 1000));
+//player.on('timeupdate', nowTime);
 
 // player.on(
 //   'play',
