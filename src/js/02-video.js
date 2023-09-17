@@ -1,10 +1,6 @@
 import Player from '@vimeo/player';
 
-//var throttle = require('lodash.throttle');
-
-import throttle from 'lodash';
-
-//console.log(throttle);
+import throttle from 'lodash/throttle';
 
 const iframe = document.querySelector('iframe');
 
@@ -42,15 +38,8 @@ function nowTime() {
       // an error occurred
     });
 
-  // console.log(nowTime);
 }
 
 player.on('timeupdate', throttle(nowTime, 1000));
 //player.on('timeupdate', nowTime);
 
-// player.on(
-//   'play',
-//   throttle(() => {
-//     console.log(456);
-//   }, 1000)
-// );
